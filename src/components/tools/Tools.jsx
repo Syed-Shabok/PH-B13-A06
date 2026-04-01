@@ -1,12 +1,28 @@
-import React, { use, useState } from "react";
+import React, { Suspense, use, useState } from "react";
 import "../../App.css";
 import ToolCard from "../ui/ToolCard";
+import AvailableTools from "./AvailableTools";
+import CartTools from "./CartTools";
 
 const Tools = ({ toolsPromise }) => {
   const tools = use(toolsPromise);
-  console.log(tools);
+  // console.log(tools);
 
   const [tab, setTab] = useState("products");
+
+  const [cartTools, setCartTools] = useState([]);
+
+  const addToCart = (item) => {
+    if (cartTools.includes(item)) {
+      alert("Already in cart.");
+      return;
+    }
+
+    const updatedList = [...cartTools, item];
+
+    setCartTools(updatedList);
+    // console.log(`${item.name} added to cart.`);
+  };
 
   return (
     <div className="my-10 space-y-5">
@@ -22,7 +38,7 @@ const Tools = ({ toolsPromise }) => {
       </div>
 
       {/* Toggle Buttons */}
-      <div className="w-fit p-1 rounded-full border border-gray-300 bg-base-200 space-x-1 mx-auto">
+      <div className="w-fit p-1 rounded-full border border-gray-300 bg-base-200 space-x-1 mx-auto mb-10">
         <button
           onClick={() => setTab("products")}
           className={`btn ${tab === "products" ? "custom-btn" : ""} text-lg font-bold rounded-full px-7 py-7 md:w-35`}
@@ -34,14 +50,25 @@ const Tools = ({ toolsPromise }) => {
           onClick={() => setTab("cart")}
           className={`btn ${tab === "cart" ? "custom-btn" : ""} text-lg  font-bold rounded-full px-7 py-7 md:w-35 border-none`}
         >
-          Cart (2)
+          Cart ({cartTools.length})
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
-        {tools.map((tool) => (
-          <ToolCard key={tool.id} tool={tool} />
-        ))}
+      {/* Tools Section */}
+      <div>
+        {tab === "products" ? (
+          <AvailableTools tools={tools} addToCart={addToCart} />
+        ) : (
+          <Suspense
+            fallback={
+              <div className="w-full flex justify-center min-h-[50vh]">
+                <span className="loading loading-bars loading-xl"></span>
+              </div>
+            }
+          >
+            <CartTools cartTools={cartTools} />
+          </Suspense>
+        )}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import { IoMdCheckmark } from "react-icons/io";
 import "../../App.css";
 
-const ToolCard = ({ tool }) => {
+const ToolCard = ({ tool, addToCart }) => {
   return (
     <div className="card flex flex-col p-6 border border-gray-300 rounded-3xl shadow-sm gap-4">
       {/* Badge */}
@@ -49,7 +49,10 @@ const ToolCard = ({ tool }) => {
       </ul>
 
       {/* Button */}
-      <button className="btn custom-btn text-lg font-bold rounded-full px-7 py-8 w-35 w-full mt-2">
+      <button
+        onClick={() => addToCart(tool)}
+        className="btn custom-btn text-lg font-bold rounded-full px-7 py-8 w-35 w-full mt-2"
+      >
         Buy Now
       </button>
     </div>
