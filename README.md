@@ -1,6 +1,4 @@
-# 🚀 Project Name
-
-DigiTools
+# 🚀DigiTools
 
 ## 🛠️ Tech Stack
 
