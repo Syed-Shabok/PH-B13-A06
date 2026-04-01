@@ -9,7 +9,7 @@ const Banner = () => {
     <div className="grid lg:grid-cols-2 items-center justify-center my-8 md:my-20 gap-10 md:gap-20">
       {/* Text Section */}
       <div className="space-y-5">
-        <div class="badge badge-soft badge-primary py-5 px-4 rounded-full md:text-lg font-medium">
+        <div className="badge badge-soft badge-primary py-5 px-4 rounded-full md:text-lg font-medium">
           <img src={dot} alt="" /> New: AI-Powered Tools Available
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold dark-text">

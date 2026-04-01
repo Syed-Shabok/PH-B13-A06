@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 import Banner from "./components/banner/Banner";
 import InfoSrtip from "./components/infoStrip/InfoSrtip";
 import Steps from "./components/steps/Steps";
+import PricingSection from "./components/pricingSection/PricingSection";
 
 const fetchToolsData = async () => {
   const res = await fetch("../public/toolsData.json");
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <Navbar />
+
       <div className="container mx-auto  px-5 lg:px-10">
         <Banner />
       </div>
@@ -38,6 +40,10 @@ function App() {
 
       <div className="bg-[#F9FAFC]">
         <Steps />
+      </div>
+
+      <div className="container mx-auto  px-5 lg:px-10">
+        <PricingSection />
       </div>
     </>
   );

@@ -18,7 +18,7 @@ const Steps = () => {
       <div className="grid lg:grid-cols-3 gap-8">
         {/* Card 1 */}
         <div className="border border-gray-300 shadows-sm rounded-2xl flex flex-col items-center justify-center p-6 space-y-5 text-center bg-[#FFFFFF]">
-          <div class="badge bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full w-10 h-10 text-[#FFFFFF] font-medium ml-auto">
+          <div className="badge bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full w-10 h-10 text-[#FFFFFF] font-medium ml-auto">
             01
           </div>
 
@@ -34,7 +34,7 @@ const Steps = () => {
 
         {/* Card 2 */}
         <div className="border border-gray-300 shadows-sm  rounded-2xl flex flex-col items-center justify-center p-6 space-y-5 text-center bg-[#FFFFFF]">
-          <div class="badge bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full w-10 h-10 text-[#FFFFFF] font-medium ml-auto">
+          <div className="badge bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full w-10 h-10 text-[#FFFFFF] font-medium ml-auto">
             02
           </div>
 
@@ -50,7 +50,7 @@ const Steps = () => {
 
         {/* Card 3 */}
         <div className="border border-gray-300 shadows-sm  rounded-2xl flex flex-col items-center justify-center p-6 space-y-5 text-center bg-[#FFFFFF]">
-          <div class="badge bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full w-10 h-10 text-[#FFFFFF] font-medium ml-auto">
+          <div className="badge bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full w-10 h-10 text-[#FFFFFF] font-medium ml-auto">
             03
           </div>
 
