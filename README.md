@@ -1,20 +1,7 @@
 # 🚀 Project Name
 
-A modern and user-friendly web application that helps users [briefly describe what your app does in 1 line].
+DigiTools
 
----
-
-## 🌐 Live Demo
-
-🔗 [View Live Project](https://your-live-link.com)
-
----
-
-## 📸 Screenshots
-
-![Homepage Screenshot](./screenshots/home.png)
-
----
 
 ## ✨ Features
 
