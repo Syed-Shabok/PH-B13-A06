@@ -9,7 +9,7 @@ import PricingSection from "./components/pricingSection/PricingSection";
 import Footer from "./components/footer/Footer";
 
 const fetchToolsData = async () => {
-  const res = await fetch("../public/toolsData.json");
+  const res = await fetch("/toolsData.json");
 
   return res.json();
 };
@@ -21,7 +21,7 @@ function App() {
     <>
       <Navbar />
 
-      <div className="container mx-auto  px-5 lg:px-10">
+      <div className="container mx-auto px-5 lg:px-10">
         <Banner />
       </div>
 
