@@ -1,8 +1,8 @@
 import React, { Suspense, use, useState } from "react";
 import "../../App.css";
-import ToolCard from "../ui/ToolCard";
 import AvailableTools from "./AvailableTools";
 import CartTools from "./CartTools";
+import { toast } from "react-toastify";
 
 const Tools = ({ toolsPromise }) => {
   const tools = use(toolsPromise);
@@ -14,14 +14,31 @@ const Tools = ({ toolsPromise }) => {
 
   const addToCart = (item) => {
     if (cartTools.includes(item)) {
-      alert("Already in cart.");
+      toast.error("Already in cart.");
       return;
     }
 
     const updatedList = [...cartTools, item];
 
     setCartTools(updatedList);
+
+    toast(`${item.name} added to cart.`);
     // console.log(`${item.name} added to cart.`);
+  };
+
+  const removeFromCart = (item) => {
+    const updatedList = cartTools.filter((tool) => tool !== item);
+
+    setCartTools(updatedList);
+
+    toast(`${item.name} removed from cart.`);
+
+    // console.log(`${item.name} removed from cart: ${cartTools}`);
+  };
+
+  const clearCart = () => {
+    setCartTools([]);
+    toast.success("Order Proceeded to Checkout.");
   };
 
   return (
@@ -66,7 +83,11 @@ const Tools = ({ toolsPromise }) => {
               </div>
             }
           >
-            <CartTools cartTools={cartTools} />
+            <CartTools
+              cartTools={cartTools}
+              removeFromCart={removeFromCart}
+              clearCart={clearCart}
+            />
           </Suspense>
         )}
       </div>

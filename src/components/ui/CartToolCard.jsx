@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartToolCard = ({ tool }) => {
+const CartToolCard = ({ tool, removeFromCart }) => {
   return (
     <div className="bg-gray-100 p-7 rounded-2xl flex items-center justify-between">
       {/* Tool Details */}
@@ -18,7 +18,10 @@ const CartToolCard = ({ tool }) => {
       </div>
 
       <div>
-        <button className="btn btn-ghost text-red-500 text-xl font-bold">
+        <button
+          onClick={() => removeFromCart(tool)}
+          className="btn btn-ghost text-red-500 text-xl font-bold"
+        >
           Remove
         </button>
       </div>
