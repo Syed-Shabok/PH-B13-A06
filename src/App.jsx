@@ -6,6 +6,7 @@ import Banner from "./components/banner/Banner";
 import InfoSrtip from "./components/infoStrip/InfoSrtip";
 import Steps from "./components/steps/Steps";
 import PricingSection from "./components/pricingSection/PricingSection";
+import Footer from "./components/footer/Footer";
 
 const fetchToolsData = async () => {
   const res = await fetch("../public/toolsData.json");
@@ -45,6 +46,8 @@ function App() {
       <div className="container mx-auto  px-5 lg:px-10">
         <PricingSection />
       </div>
+
+      <Footer />
     </>
   );
 }

@@ -1,7 +1,5 @@
 import React from "react";
-import user from "../../assets/user.png";
-import box from "../../assets/package.png";
-import rocket from "../../assets/rocket.png";
+
 import { IoMdCheckmark } from "react-icons/io";
 
 const PricingSection = () => {
