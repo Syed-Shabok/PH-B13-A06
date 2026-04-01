@@ -16,9 +16,9 @@ const CartTools = ({ cartTools, removeFromCart, clearCart }) => {
         <div className="flex flex-col gap-4 items-center justify-center min-h-[40vh] border border-gray-300 rounded-2xl shadow-sm">
           <FaCartShopping size={80} className="text-gray-300" />
           <h1 className="text-3xl font-semibold text-center light-text">
-            Cart is Empty
+            Your Cart is Empty
           </h1>
-          <p className="light-text text-lg">
+          <p className="light-text md:text-lg text-center">
             You can add items to your cart from the Products tab
           </p>
         </div>

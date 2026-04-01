@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import "./App.css";
 import Tools from "./components/tools/Tools";
 import Navbar from "./components/navbar/Navbar";
+import Banner from "./components/banner/Banner";
 
 const fetchToolsData = async () => {
   const res = await fetch("../public/toolsData.json");
@@ -16,6 +17,7 @@ function App() {
     <>
       <Navbar />
       <div className="container mx-auto  px-5 lg:px-10">
+        <Banner />
         <Suspense
           fallback={
             <div className="w-full flex justify-center min-h-[50vh]">

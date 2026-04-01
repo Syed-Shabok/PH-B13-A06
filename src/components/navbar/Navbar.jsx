@@ -1,5 +1,4 @@
-import React from "react";
-import { FiShoppingCart } from "react-icons/fi";
+import CartButton from "../ui/CartButton";
 
 const Navbar = () => {
   return (
@@ -43,6 +42,13 @@ const Navbar = () => {
               <li>
                 <a>FAQ</a>
               </li>
+              <div className="divider my-1"></div>
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <a className="pl-2 font-semibold">Login</a>
+                <button className="btn custom-btn  font-semibold rounded-full w-fit">
+                  Get Started
+                </button>
+              </div>
             </ul>
           </div>
           <a className="btn btn-ghost text-3xl font-extrabold gradient-text">
@@ -50,7 +56,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="flex gap-6 px-1 font-semibold text-lg dark-text">
+          <ul className="flex gap-4 xl:gap-6 px-1 font-semibold text-lg dark-text">
             <li>
               <a>Products</a>
             </li>
@@ -69,13 +75,14 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <button className="btn btn-ghost rounded-full">
-            <FiShoppingCart className="mr-1" size={20} />
-          </button>
-          <a className="text-lg font-semibold px-4">Login</a>
-          <button className="btn custom-btn text-lg font-semibold rounded-full px-6 py-7">
-            Get Started
-          </button>
+          {/* Cart Button Component */}
+          <CartButton />
+          <div className="hidden lg:flex items-center">
+            <a className="text-lg font-semibold px-4">Login</a>
+            <button className="btn custom-btn text-lg font-semibold rounded-full px-6 py-7">
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
     </div>

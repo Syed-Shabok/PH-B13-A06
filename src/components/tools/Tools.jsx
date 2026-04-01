@@ -23,6 +23,7 @@ const Tools = ({ toolsPromise }) => {
     setCartTools(updatedList);
 
     toast(`${item.name} added to cart.`);
+
     // console.log(`${item.name} added to cart.`);
   };
 
@@ -42,7 +43,7 @@ const Tools = ({ toolsPromise }) => {
   };
 
   return (
-    <div className="my-10 space-y-5">
+    <div className="my-25 space-y-5">
       {/* Title */}
       <div className="md:w-3/4 xl:w-1/2 mx-auto text-center space-y-4">
         <h1 className="font-bold dark-text text-4xl md:text-5xl">
@@ -96,4 +97,3 @@ const Tools = ({ toolsPromise }) => {
 };
 
 export default Tools;
-<h1>Tools</h1>;
