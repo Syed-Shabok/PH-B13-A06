@@ -4,6 +4,7 @@ import Tools from "./components/tools/Tools";
 import Navbar from "./components/navbar/Navbar";
 import Banner from "./components/banner/Banner";
 import InfoSrtip from "./components/infoStrip/InfoSrtip";
+import Steps from "./components/steps/Steps";
 
 const fetchToolsData = async () => {
   const res = await fetch("../public/toolsData.json");
@@ -33,6 +34,10 @@ function App() {
         >
           <Tools toolsPromise={toolsPromise} />
         </Suspense>
+      </div>
+
+      <div className="bg-[#F9FAFC]">
+        <Steps />
       </div>
     </>
   );
