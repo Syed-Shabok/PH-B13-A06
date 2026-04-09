@@ -84,6 +84,17 @@ Each product includes:
 
 ---
 
+
+## 📱 Responsive Design
+
+This project is fully responsive and follows standard design practices for:
+
+* Mobile devices
+* Tablets
+* Desktop screens
+
+---
+
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
@@ -110,21 +121,4 @@ npm install
 npm run dev
 ```
 
----
-
-## 📦 Build for Production
-
-```bash
-npm run build
-```
-
----
-
-## 📱 Responsive Design
-
-This project is fully responsive and follows standard design practices for:
-
-* Mobile devices
-* Tablets
-* Desktop screens
 
